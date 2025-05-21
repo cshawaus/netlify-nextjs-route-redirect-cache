@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  expireTime: 60, // 1 minute
 
-export default nextConfig;
+  devIndicators: {
+    position: 'bottom-left',
+  },
+}
+
+export default nextConfig
