@@ -1,4 +1,4 @@
-import type { NextRequest } from 'next/server'
+import { NextResponse, type NextRequest } from 'next/server'
 
 export const dynamic = 'force-dynamic'
 
@@ -11,5 +11,5 @@ export async function GET(request: NextRequest) {
     return new Response('URL parameter is required', { status: 400 })
   }
 
-  return Response.redirect(new URL(redirectUrl, request.nextUrl), 302)
+  return NextResponse.redirect(new URL(redirectUrl, request.nextUrl), 302)
 }
